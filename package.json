@@ -1,11 +1,13 @@
 {
   "name": "ai-desktop-builder",
-  "version": "0.1.0",
-  "description": "Offline-first desktop app builder with live HTML preview and Windows installer builds",
+  "version": "0.2.0",
+  "description": "Offline-first desktop app builder with NVIDIA-compatible local AI, live preview and Windows installer builds",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --win nsis"
+    "dist": "electron-builder --win nsis",
+    "dist:portable": "electron-builder --win portable",
+    "dev": "electron ."
   },
   "devDependencies": {
     "electron": "^38.1.0",
