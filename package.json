@@ -1,0 +1,21 @@
+{
+  "name": "ai-desktop-builder",
+  "version": "0.1.0",
+  "description": "Offline-first desktop app builder with live HTML preview and Windows installer builds",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^38.1.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.ozkan.aidesktopbuilder",
+    "productName": "AI Desktop Builder",
+    "files": ["**/*", "!dist/**"],
+    "win": { "target": ["nsis", "portable"] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true }
+  }
+}
